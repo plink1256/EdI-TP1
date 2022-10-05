@@ -6,95 +6,210 @@
     <style>
 
         body{
-            background: white;
+            background: linear-gradient(#e2f4fb, #96d9f0);
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             padding: 0 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        a{
+            color: black;
+            font-family: monospace;
+            font-size: 1rem;
+            transition: color 200ms;
+        }
+
+        a:hover{
+            color: blue;
         }
 
         h1, h2, h3, h4, h5, h6{
-            font-family: Rockwell, sans-serif;
+            font-family: Futura, "Arial Black", sans-serif;
         }
 
             h1 {
-                font-size: 50px;
+                font-size: 45px;
                 text-align: left;
-                margin: 10px;
+                margin-bottom: 0;
             }
 
             h2{
                 text-transform: uppercase;
+                margin-top: 80px;
             }
 
-        img{
-            background: greenyellow;
-            padding: 30px;
-            margin: 10px 30px;
-        }
+            h3{
+                margin-bottom: 5px;
+            }
+
+            h4, h5, h6{
+                font-family: monospace;
+            }
+
+            h6{
+                font-size: 14px;
+            }
 
         hr{
-            margin: 20px;
-            color: greenyellow;
-            height: 3px;
-            background: greenyellow;
-            border: none;
+            margin: 50px 30% 50px 0;
+
+        }
+
+        ul.navigation{
+            display: flex;
+            padding: 10px 0;
+            margin: 0;
+        }
+
+            ul.navigation li{
+                list-style: none;
+                font-family: monospace;
+                font-size: 1.2rem;
+            }
+
+                ul.navigation li a{
+                    padding: 10px 10px 10px 0;
+                }
+
+        ul.liste-competence{
+            margin: 0;
+            padding: 0 20px;
+        }
+
+        ul.liste-competence li{
+            list-style: " > ";
+        }
+
+        ol{
+            margin-left: 42%;
+        }
+
+        img.content{
+            border: 2px solid black;
+            margin-right: 20px;
+            float: left;
         }
 
     </style>
 </head>
 <body>
 
-    <img src="images/me.jpeg" alt="" style="float: left; max-width: 40%; max-height: 1000px">
+    <img src="images/me.png" alt="" style="height: 250px">
 
-    <h1>Hey 👋🏻 <br>moi c'est Simon!</h1>
+    <h1 class="main-titre">Simon Larochelle</h1>
 
-    <h2>Infos personnelles</h2>
+    <ul class="navigation">
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#education">Éducation</a></li>
+        <li><a href="#experiences">Expériences</a></li>
+        <li><a href="#interets">Intérêts</a></li>
+    </ul>
+
+    <p>Simon <i>(moi)</i>, c'est le meilleur<sup>1</sup>! Avec des années d'expériences en multimédia, en gestion d'équipe et en consommation de café, je suis prêt à tout affronté.</p>
+
+    <p><sup>1</sup>selon ma grand-mère</p>
+
+    <h2 id="contact">Infos de contact</h2>
 
     <p><b>Addresse</b>: 1234, Av du College, Montréal, QC</p>
-    <p><b>Téléphone</b>: (514) 887-5276</p>
+    <p><b>Téléphone</b>: (514) 123-4567</p>
     <p><b>Langues parlées</b>: Français <i>(langue maternelle)</i> & Anglais <i>(fluent)</i></p>
     <p><b>Courriel</b>: <a href="mailto:me@slarochelle.com">me@slarochelle.com</a></p>
-    <p><b>Sit web</b>: <a href="http://slarochelle.com" target="_blank">slarochelle.com</a></p>
+    <p><b>Site web</b>: <a href="http://slarochelle.com" target="_blank">slarochelle.com</a></p>
+    <p><b>Anniversaire</b>: 26 Juin 🎈</p>
 
     <hr>
 
-    <h2>Éducation</h2>
+    <h2 id="competences">Compétences</h2>
+        <h3>Web</h3>
+            <ul class="liste-competence">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        <h3>Multimédia</h3>
+            <ul class="liste-competence">
+                <li>Photoshop</li>
+                <li>Premiere Pro</li>
+                <li>Illustrator</li>
+            </ul>
+        <h3>Programmation</h3>
+            <ul class="liste-competence">
+                <li>Python</li>
+                <li>Java</li>
+                <li>C++</li>
+            </ul>
+
+    <hr>
+
+    <h2 id="experiences">Expériences professionnelles</h2>
+    <h3>Superviseur pour Starbucks Canada</h3>
+    <h4>2018 - Présent</h4>
+    <ul>
+        <li>Gestion des fonds</li>
+        <li>Mener une équipe à ateindre les objectifs</li>
+        <li>Maintient d'inventaire</li>
+        <li>Création de C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub> <i>(aka cafféine)</i></li>
+    </ul>
+
+    <h3>Homme-à-tout-faire pour Locadent Inc.</h3>
+    <h4>2017 - Présent</h4>
+    <ul>
+        <li>Tâches de maintenance</li>
+        <li>Support informatique</li>
+    </ul>
+
+
+    <hr>
+
+    <h2 id="education">Éducation</h2>
     <h3>Collégial</h3>
-        <h4>Collège de Maisonneuve</h4>
-            <p>2022 - présent</p>
+        <h4><a href="https://cmaisonneuve.qc.ca" target="_blank">Collège de Maisonneuve</a></h4>
+            <h5>2022 - présent</h5>
             <p>Technique en Informatique</p>
-        <h4>Cégep du Vieux-Montréal</h4>
-            <p>2021 - 2022</p>
+        <h4><a href="https://www.cvm.qc.ca" target="_blank">Cégep du Vieux-Montréal</a></h4>
+            <h5>2021 - 2022</h5>
             <p>Technique en Informatique</p>
-        <h4>Collège Édouard-Montpetit</h4>
-            <p>2017 - 2020</p>
+        <h4><a href="https://www.cegepmontpetit.ca/" target="_blank">Collège Édouard-Montpetit</a></h4>
+            <h5>2017 - 2020</h5>
             <p>Technique d'Intégration Multimédia</p>
     <h3>Secondaire</h3>
-        <h4>École Secondaire de la Magdeleine</h4>
+        <h4><a href="https://www.lamag.gouv.qc.ca/" target="_blank">École Secondaire de la Magdeleine</a></h4>
             <h5>2012 - 2017</h5>
             <p>Programme d'Étude Internationalle, Diplome du BI obtenu</p>
 
     <hr>
 
-    <h2>Expériences professionnelles</h2>
-        <h3>Superviseur pour Starbucks Canada</h3>
-        <h4>2018 - Présent</h4>
-        <ul>
-            <li>Gestion des fonds</li>
-            <li>Mener une équipe à ateindre les objectifs</li>
-            <li>Boire beaucoup de café</li>
-        </ul>
+    <h2 id="interets">Loisirs et intérêts</h2>
 
-        <h3>Homme-à-tout-faire pour Locadent Inc.</h3>
-        <h4>2017 - Présent</h4>
-        <ul>
-            <li>Tâches de maintenance</li>
-            <li>Support informatique</li>
-        </ul>
+    <h3>Informatique</h3>
+    <p>Depuis que je suis tout petit, je m'intéresse beaucoup à tout ce qui touche l'informatique. Mon père m'y a introduit j'avais à peine 3-4 ans, et c'est depuis rester mon hobbie préféré.</p>
+    <p>Je m'intéresse particulièrement à ce qui est <i>retro</i>, j'ai une petite collection personnelle de PCs du début des années 2000 que j'aime bien explorer et utiliser pour jouer à de vieux jeux sur CD. (Notamment SimCity 3000)</p>
+
+    <img src="images/me.jpeg" alt="photo de moi en face de l'océan" height="500px" class="content">
+    <h3>Voyager</h3>
+    <p>J'ai l'énorme chance d'avoir beaucoup voyagé, grâce à ma grand-mère qui adore m'ammener avec elle lors de ces périples autour du monde.</p>
+    <h6><u>Top 3 destinations</u></h6>
+    <ol>
+        <li>Nouvelle Zélande</li>
+        <li>Australie</li>
+        <li>Norvège</li>
+    </ol>
+    <p><- Photo de moi au <i>Acadia National Park</i>, Maine, 2022</p>
+
+    <h3>Nature</h3>
+    <p>S'entourer de nature et de plante est quelque chose de très important pour moi, si seulement parce que c'est magnifique. J'ai habité plusieurs années dans la fôret en grandissant, ce qui à
+    beaucoup encourager cet amour pour la nature. Maintenant que j'habite en ville, je remplis mon apart de plante, pour essayer de re-créer un peu de fôret chez moi.</p>
 
     <hr>
 
-    <h2>Loisirs et intérêts</h2>
-        <h3>Informatique</h3>
-        <h3>Nature</h3>
+    <p>Merci d'avoir pris le temps de faire un peu connaissance! À bientôt!
+    </p>
+
+
+
+
 </body>
 </html>
